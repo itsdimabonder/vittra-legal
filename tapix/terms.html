@@ -1,308 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service — Tapix</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Tapix</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0E0E10;
-      color: #E8E8EC;
-      line-height: 1.7;
-      padding: 0 24px;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 64px 0 96px;
-    }
+        body {
+            background-color: #0A0A0F;
+            color: #F0EFF8;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            font-size: 15px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    .wordmark {
-      font-size: 11px;
-      letter-spacing: 3px;
-      font-weight: 600;
-      color: #666;
-      text-transform: uppercase;
-      margin-bottom: 48px;
-      display: block;
-    }
+        .accent-bar {
+            height: 3px;
+            background: linear-gradient(90deg, #7B6EF6, #9D93F8, #3DDBB4);
+            width: 100%;
+        }
 
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 8px;
-      color: #E8E8EC;
-    }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
 
-    .effective {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 48px;
-    }
+        .brand {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: #7B6EF6;
+            margin-bottom: 8px;
+        }
 
-    .rule {
-      width: 40px;
-      height: 2px;
-      background: linear-gradient(90deg, #7B6EF6, #A78BFA);
-      margin-bottom: 48px;
-      border-radius: 1px;
-    }
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #F0EFF8;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
 
-    .intro {
-      font-size: 16px;
-      background: #1A1A20;
-      border: 0.5px solid #2A2A30;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 48px;
-      color: #C8C8D0;
-    }
+        .meta {
+            color: #7A79A0;
+            font-size: 13px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
 
-    h2 {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #666;
-      margin-top: 48px;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 0.5px solid #2A2A30;
-    }
+        .meta span {
+            display: inline-block;
+            margin-right: 20px;
+        }
 
-    p {
-      font-size: 15px;
-      margin-bottom: 16px;
-      color: #C8C8D0;
-    }
+        .intro {
+            color: #7A79A0;
+            font-size: 15px;
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
 
-    ul {
-      list-style: none;
-      margin-bottom: 16px;
-    }
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #F0EFF8;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            letter-spacing: -0.3px;
+        }
 
-    ul li {
-      font-size: 15px;
-      padding: 6px 0 6px 20px;
-      position: relative;
-      color: #C8C8D0;
-    }
+        h2 .section-number {
+            color: #7B6EF6;
+            margin-right: 6px;
+        }
 
-    ul li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      color: #555;
-    }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #F0EFF8;
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
 
-    .pricing-block {
-      background: #1A1A20;
-      border: 0.5px solid #2A2A30;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 16px;
-    }
+        p {
+            margin-bottom: 14px;
+            color: #F0EFF8;
+        }
 
-    .pricing-block strong {
-      display: block;
-      font-size: 15px;
-      margin-bottom: 8px;
-      color: #E8E8EC;
-    }
+        a {
+            color: #7B6EF6;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
 
-    .pricing-block p {
-      font-size: 13px;
-      color: #888;
-      margin: 0;
-    }
+        a:hover {
+            color: #9D93F8;
+            text-decoration: underline;
+        }
 
-    .quota-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      border-bottom: 0.5px solid #2A2A30;
-      font-size: 14px;
-      color: #C8C8D0;
-    }
+        ul, ol {
+            margin-bottom: 14px;
+            padding-left: 24px;
+        }
 
-    .quota-row:last-child { border-bottom: none; }
-    .quota-row span:last-child { color: #888; font-size: 13px; }
+        li {
+            margin-bottom: 8px;
+            color: #F0EFF8;
+        }
 
-    .notice {
-      background: #1C1A10;
-      border: 0.5px solid #3D3820;
-      border-radius: 12px;
-      padding: 16px 20px;
-      margin-bottom: 16px;
-      font-size: 14px;
-      color: #C8C8D0;
-    }
+        .card {
+            background-color: #141422;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
 
-    .contact-block {
-      margin-top: 48px;
-      padding: 24px;
-      border: 0.5px solid #2A2A30;
-      border-radius: 12px;
-    }
+        .card p:last-child,
+        .card ul:last-child {
+            margin-bottom: 0;
+        }
 
-    .contact-block p { margin: 0; font-size: 14px; color: #C8C8D0; }
-    .contact-block strong { color: #E8E8EC; }
-    .contact-block a { color: #A78BFA; text-decoration: none; }
+        .card-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #7B6EF6;
+            margin-bottom: 10px;
+        }
 
-    a { color: #A78BFA; text-decoration: none; }
+        .disclaimer {
+            background-color: #141422;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #7A79A0;
+        }
 
-    .footer-nav {
-      margin-top: 64px;
-      padding-top: 24px;
-      border-top: 0.5px solid #2A2A30;
-      font-size: 13px;
-      color: #555;
-    }
-  </style>
+        .disclaimer strong {
+            color: #F0EFF8;
+        }
+
+        .muted {
+            color: #7A79A0;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            margin: 48px 0;
+        }
+
+        .contact-card {
+            background-color: #141422;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 16px;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .contact-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer {
+            text-align: center;
+            color: #7A79A0;
+            font-size: 13px;
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .footer .brand-footer {
+            font-weight: 600;
+            color: #7B6EF6;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 18px 60px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 18px;
+                margin-top: 36px;
+            }
+
+            .meta span {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 2px;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
+    <div class="accent-bar"></div>
+    <div class="container">
+        <div class="brand">Tapix</div>
+        <h1>Terms of Service</h1>
+        <div class="meta">
+            <span>Effective Date: March 12, 2026</span>
+            <span>Last Updated: March 12, 2026</span>
+        </div>
 
-  <span class="wordmark">TAPIX</span>
+        <!-- 1. Acceptance of Terms -->
+        <h2><span class="section-number">1.</span> Acceptance of Terms</h2>
+        <p>By downloading, installing, or using Tapix, you agree to be bound by these Terms of Service. If you do not agree to these Terms, do not download, install, or use the app.</p>
 
-  <h1>Terms of Service</h1>
-  <p class="effective">Effective date: March 12, 2026 &nbsp;·&nbsp; Last updated: March 12, 2026</p>
-  <div class="rule"></div>
+        <!-- 2. Description of Service -->
+        <h2><span class="section-number">2.</span> Description of Service</h2>
+        <p>Tapix is an AI-powered keyboard and text transformation app for iOS. It provides AI-driven text actions — including rewrite, translate, fix grammar, summarize, expand, and more — through both an in-app interface and a custom keyboard extension. The app requires iOS 17 or later.</p>
 
-  <div class="intro">
-    Please read these Terms carefully before using Tapix. By downloading or using the app, you agree to be bound by these Terms. If you do not agree, do not use the app.
-  </div>
+        <!-- 3. Service Tiers -->
+        <h2><span class="section-number">3.</span> Service Tiers</h2>
 
-  <h2>1. About Tapix</h2>
-  <p>Tapix is an AI-powered keyboard extension for iOS developed by Dmzlabz ("we," "us," or "our"). Tapix helps you transform text directly from any app — fix grammar, translate between languages, adjust tone, shorten text, and generate smart replies. Tapix is not a translation bureau, writing agency, or professional editing service. AI-generated results are provided as suggestions and may contain errors.</p>
+        <div class="card">
+            <div class="card-label">Free Tier</div>
+            <p>Access to all AI text actions, limited to <strong>15 AI actions per day</strong>. The daily limit resets at midnight.</p>
+        </div>
 
-  <h2>2. Eligibility</h2>
-  <p>You must be at least 13 years old to use Tapix. By using the app, you confirm that you meet this requirement. If you are under 18, you should have the permission of a parent or legal guardian.</p>
+        <div class="card">
+            <div class="card-label">Pro Tier — Tapix Premium</div>
+            <p><strong>Unlimited AI actions</strong> with no daily cap. Available as a monthly or annual subscription.</p>
+        </div>
 
-  <h2>3. License to Use Tapix</h2>
-  <p>Subject to these Terms, we grant you a personal, non-exclusive, non-transferable, revocable license to use Tapix on Apple devices you own or control, as permitted by the App Store Terms of Service.</p>
-  <p>You may not:</p>
-  <ul>
-    <li>Copy, modify, or distribute any part of the app</li>
-    <li>Reverse engineer, decompile, or disassemble the app</li>
-    <li>Use the app for any unlawful purpose or in violation of any applicable laws</li>
-    <li>Attempt to extract the app's API keys or circumvent usage quotas by technical means</li>
-    <li>Use the keyboard extension to process text belonging to others without authorization</li>
-    <li>Use the app to generate spam, misleading content, or content that violates third-party rights</li>
-    <li>Resell or sublicense access to the app or its Pro features</li>
-  </ul>
+        <!-- 4. Subscription Terms -->
+        <h2><span class="section-number">4.</span> Subscription Terms</h2>
+        <ul>
+            <li>Subscriptions are billed through your Apple ID account via the App Store.</li>
+            <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+            <li>Subscriptions automatically renew unless auto-renewal is turned off at least 24 hours before the end of the current billing period.</li>
+            <li>Your account will be charged for renewal within 24 hours prior to the end of the current period at the same price.</li>
+            <li>You can manage and cancel subscriptions in your Apple ID Account Settings.</li>
+            <li>Any unused portion of a free trial period will be forfeited when you purchase a subscription.</li>
+            <li>Prices may vary by region and are determined by Apple's App Store pricing.</li>
+        </ul>
 
-  <h2>4. Free and Pro Tiers</h2>
-  <p>Tapix is available in two tiers:</p>
+        <!-- 5. Keyboard Extension & Full Access -->
+        <h2><span class="section-number">5.</span> Keyboard Extension &amp; Full Access</h2>
+        <p>The Tapix keyboard extension requires "Full Access" permission to function. This permission is needed solely to enable network communication with AI providers for text processing.</p>
+        <p>You can enable or revoke Full Access at any time in <strong>iOS Settings &gt; Tapix &gt; Keyboards</strong>.</p>
+        <p>Without Full Access enabled, the keyboard's AI features will not be available.</p>
 
-  <div class="pricing-block">
-    <strong>Tapix Free</strong>
-    <p>Available to all users at no cost. Includes core AI text actions with a limited number of daily credits.</p>
-  </div>
+        <!-- 6. AI-Generated Content -->
+        <h2><span class="section-number">6.</span> AI-Generated Content</h2>
+        <ul>
+            <li>Text transformations are produced by third-party AI models (Anthropic Claude and Google Gemini).</li>
+            <li>AI-generated content is provided "as is" without warranty of accuracy, completeness, or appropriateness.</li>
+            <li>You are solely responsible for reviewing, editing, and using any AI-generated text.</li>
+            <li>We do not guarantee that AI outputs will be free from errors, bias, or inappropriate content.</li>
+            <li>AI-generated content should not be relied upon for legal, medical, financial, or other professional advice.</li>
+        </ul>
 
-  <div class="pricing-block">
-    <strong>Tapix Pro — Monthly Subscription</strong>
-    <p>An auto-renewable subscription that unlocks unlimited AI actions, all premium features, and priority processing. Billed monthly through Apple's App Store.</p>
-  </div>
+        <!-- 7. AI Consent -->
+        <h2><span class="section-number">7.</span> AI Consent</h2>
+        <p>Before using AI features, you must accept our AI data processing consent within the app. This consent acknowledges that your selected text will be sent to third-party AI providers for processing.</p>
+        <p>You may decline consent, but AI features will not be available without it.</p>
 
-  <div class="pricing-block">
-    <strong>Tapix Pro — Annual Subscription</strong>
-    <p>An auto-renewable subscription with all Pro features at a discounted annual rate. Billed annually through Apple's App Store.</p>
-  </div>
+        <!-- 8. Acceptable Use -->
+        <h2><span class="section-number">8.</span> Acceptable Use</h2>
+        <p>You agree <strong>not</strong> to:</p>
+        <ul>
+            <li>Use Tapix to generate harmful, illegal, abusive, or harassing content</li>
+            <li>Attempt to reverse-engineer, decompile, or disassemble the app</li>
+            <li>Use the service to violate any applicable laws or regulations</li>
+            <li>Circumvent usage limits or subscription requirements</li>
+            <li>Use automated systems to access the service beyond normal app usage</li>
+            <li>Resell or redistribute the service or AI outputs commercially without authorization</li>
+        </ul>
 
-  <p>Current feature comparison:</p>
-  <div style="border: 0.5px solid #2A2A30; border-radius: 12px; padding: 0 20px; margin-bottom: 16px;">
-    <div class="quota-row"><span>AI actions (Fix It, Translate, Tone, Shorten, Smart Reply)</span><span>Limited (Free) / Unlimited (Pro)</span></div>
-    <div class="quota-row"><span>Tone submenu (Formal, Casual, Polite, Professional)</span><span>All users</span></div>
-    <div class="quota-row"><span>Insights dashboard</span><span>Pro only</span></div>
-    <div class="quota-row"><span>Priority processing</span><span>Pro only</span></div>
-  </div>
+        <!-- 9. Intellectual Property -->
+        <h2><span class="section-number">9.</span> Intellectual Property</h2>
+        <ul>
+            <li>Tapix, its design, features, and code are the intellectual property of Dmzlabz Inc..</li>
+            <li>You retain ownership of the text you input into Tapix.</li>
+            <li>AI-generated outputs are provided for your use; ownership of AI-generated content is subject to the terms of the underlying AI providers (Anthropic and Google).</li>
+            <li>The "Mercury" design system, Tapix branding, and associated visual elements are proprietary.</li>
+        </ul>
 
-  <p>We reserve the right to adjust feature limits with reasonable notice. We will not retroactively remove features from existing Pro subscribers during their active subscription period.</p>
+        <!-- 10. Privacy -->
+        <h2><span class="section-number">10.</span> Privacy</h2>
+        <p>Your privacy is important to us. Please review our <a href="privacy.html">Privacy Policy</a> for details on data collection and handling. The Privacy Policy is incorporated into these Terms by reference.</p>
 
-  <h2>5. Subscriptions, Billing, and Cancellation</h2>
-  <p>Tapix Pro is offered as an auto-renewable subscription. Payment is charged to your Apple ID account at confirmation of purchase. Your subscription automatically renews unless cancelled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the rate of your selected plan.</p>
-  <p>You can manage or cancel your subscription at any time through your iPhone's Settings → Apple ID → Subscriptions. Cancellation takes effect at the end of the current billing period — you retain access to Pro features until then.</p>
-  <p>All payments are processed by Apple through the App Store. Tapix does not directly handle payment information. Refunds are governed by Apple's refund policy. You can request a refund through Apple's support at <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</p>
+        <!-- 11. Disclaimer of Warranties -->
+        <h2><span class="section-number">11.</span> Disclaimer of Warranties</h2>
+        <div class="disclaimer">
+            TAPIX IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE.
+        </div>
 
-  <h2>6. AI Text Transformation Feature</h2>
-  <p>Tapix uses Anthropic's Claude API to process text you submit through AI actions. By using this feature, you acknowledge and agree that:</p>
-  <ul>
-    <li>Text you select and submit via an AI action is transmitted to Anthropic's servers for processing</li>
-    <li>You should only submit text that you own or have the right to process</li>
-    <li>You should not submit text containing highly sensitive personal information (e.g., passwords, financial account numbers, government ID numbers)</li>
-    <li>Tapix does not store submitted text after the AI result is returned</li>
-    <li>AI-generated results may be inaccurate, incomplete, or contextually inappropriate — always review results before using them</li>
-    <li>Free-tier usage is subject to daily credit limits to manage API costs</li>
-  </ul>
+        <!-- 12. Limitation of Liability -->
+        <h2><span class="section-number">12.</span> Limitation of Liability</h2>
+        <div class="disclaimer">
+            TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, Dmzlabz Inc. SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR BUSINESS INTERRUPTION, ARISING FROM YOUR USE OF OR INABILITY TO USE TAPIX. OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE SERVICE IN THE 12 MONTHS PRECEDING THE CLAIM.
+        </div>
 
-  <h2>7. Keyboard Extension and Full Access</h2>
-  <p>Tapix requires iOS "Full Access" permission to communicate with the AI service. Enabling Full Access allows the keyboard extension to send your selected text over the network to the Claude API. Full Access does not grant Tapix the ability to log keystrokes, access your passwords, or monitor text you do not explicitly submit to an action. See our <a href="privacy.html">Privacy Policy</a> for full details on data handling.</p>
+        <!-- 13. Indemnification -->
+        <h2><span class="section-number">13.</span> Indemnification</h2>
+        <p>You agree to indemnify and hold harmless Dmzlabz Inc. from any claims, damages, losses, liabilities, and expenses (including reasonable attorney's fees) arising from your use of Tapix, your violation of these Terms, or your violation of any rights of another party.</p>
 
-  <h2>8. Content Accuracy</h2>
-  <p>AI-generated text transformations are provided as suggestions only. Tapix does not guarantee the accuracy, appropriateness, or quality of any AI output. Translations may contain errors. Tone adjustments may not perfectly match your intent. You are responsible for reviewing and editing all AI-generated content before using it in any context — professional, personal, or otherwise.</p>
+        <!-- 14. Service Modifications -->
+        <h2><span class="section-number">14.</span> Service Modifications</h2>
+        <p>We reserve the right to modify, suspend, or discontinue Tapix (or any part thereof) at any time, with or without notice. We shall not be liable for any modification, suspension, or discontinuation of the service.</p>
 
-  <h2>9. User Responsibilities</h2>
-  <p>You are responsible for:</p>
-  <ul>
-    <li>Reviewing all AI-generated text before using, sending, or publishing it</li>
-    <li>Ensuring you have the right to process any text you submit to Tapix</li>
-    <li>Complying with all applicable laws when using AI-generated content</li>
-    <li>Not using Tapix to generate harmful, abusive, fraudulent, or illegal content</li>
-    <li>Any consequences arising from your use of AI-generated text</li>
-  </ul>
+        <!-- 15. Termination -->
+        <h2><span class="section-number">15.</span> Termination</h2>
+        <ul>
+            <li>We may terminate or suspend your access to Tapix at any time for violation of these Terms.</li>
+            <li>You may stop using Tapix at any time by uninstalling the app.</li>
+            <li>Upon termination, your right to use Tapix ceases immediately. All locally stored data will be removed upon uninstallation.</li>
+        </ul>
 
-  <h2>10. Intellectual Property</h2>
-  <p>Tapix, including its design, graphics, code, and content, is the property of Dmzlabz and is protected by applicable intellectual property laws. The Tapix name, logo, and all associated branding are owned by Dmzlabz.</p>
-  <p>Text you submit to Tapix remains your property. AI-generated transformations of your text are provided for your use without restriction.</p>
+        <!-- 16. Governing Law -->
+        <h2><span class="section-number">16.</span> Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the State of Israel, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Israel.</p>
 
-  <h2>11. Disclaimers</h2>
-  <p>TAPIX IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
-  <p>We do not warrant that:</p>
-  <ul>
-    <li>The app or keyboard extension will be uninterrupted, error-free, or free of viruses</li>
-    <li>AI-generated text transformations will be accurate, complete, or contextually appropriate</li>
-    <li>Translations will be error-free or suitable for professional, legal, or medical use</li>
-    <li>The AI service will always be available (subject to Anthropic's infrastructure and API availability)</li>
-  </ul>
+        <!-- 17. Changes to Terms -->
+        <h2><span class="section-number">17.</span> Changes to Terms</h2>
+        <p>We may update these Terms from time to time. We will notify users of material changes through the app or by updating the "Last Updated" date at the top of this page. Your continued use of Tapix after changes constitutes acceptance of the revised Terms.</p>
 
-  <h2>12. Limitation of Liability</h2>
-  <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, DMZLABZ SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, REPUTATIONAL HARM, OR ANY CONSEQUENCES ARISING FROM RELIANCE ON AI-GENERATED CONTENT.</p>
-  <p>Our total liability to you for any claim arising from your use of Tapix shall not exceed the amount you paid for Tapix Pro in the twelve (12) months preceding the claim, or $10 if you are a free user.</p>
+        <!-- 18. Severability -->
+        <h2><span class="section-number">18.</span> Severability</h2>
+        <p>If any provision of these Terms is found to be unenforceable or invalid by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect.</p>
 
-  <h2>13. Termination</h2>
-  <p>You may stop using Tapix at any time by deleting the app from your device and cancelling any active subscription. We reserve the right to terminate or suspend access to the app if you violate these Terms.</p>
-  <p>Upon termination, your license to use the app ends. Active subscriptions can be cancelled through Apple's subscription management. Refunds for the remaining subscription period are governed by Apple's refund policy.</p>
+        <!-- 19. Contact Us -->
+        <h2><span class="section-number">19.</span> Contact Us</h2>
+        <p>If you have questions about these Terms of Service:</p>
+        <div class="contact-card">
+            <p><span class="muted">Email:</span> vittra.app@gmail.com</p>
+            <p><span class="muted">Developer:</span> Dmzlabz Inc.</p>
+        </div>
 
-  <h2>14. Changes to the App and Terms</h2>
-  <p>We reserve the right to modify, update, or discontinue features of Tapix at any time. We may update these Terms from time to time. Continued use of Tapix after updated Terms are posted constitutes your acceptance of the changes. For significant changes, we will provide notice within the app.</p>
+        <hr class="divider">
 
-  <h2>15. Governing Law</h2>
-  <p>These Terms are governed by the laws of the State of Israel, without regard to conflict of law principles. Any disputes arising from these Terms or your use of Tapix shall be resolved in the competent courts of Israel.</p>
-
-  <h2>16. Apple Requirements</h2>
-  <p>Tapix is distributed through Apple's App Store. Apple is not a party to these Terms and is not responsible for the app or its content. Apple has no obligation to provide maintenance or support for Tapix. In the event of any failure of Tapix to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if applicable). To the maximum extent permitted by applicable law, Apple will have no other warranty obligation with respect to Tapix.</p>
-  <p>Apple and its subsidiaries are third-party beneficiaries of these Terms, and upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</p>
-
-  <h2>17. Contact</h2>
-  <div class="contact-block">
-    <p><strong>Questions about these Terms?</strong><br /><br />
-    Dmzlabz<br />
-    <a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a><br />
-    Israel<br /><br />
-    For privacy-specific inquiries: <a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a></p>
-  </div>
-
-  <div class="footer-nav">
-    <a href="index.html">← Back</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a>
-  </div>
-
-</div>
+        <div class="footer">
+            <p><a href="index.html">← Back</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
+            <p>Tapix &mdash; AI Keyboard for iOS</p>
+            <p style="margin-top: 6px;">&copy; 2026 Dmzlabz Inc. All rights reserved.</p>
+        </div>
+    </div>
 </body>
 </html>

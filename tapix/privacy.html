@@ -1,285 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Tapix</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Tapix</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0E0E10;
-      color: #E8E8EC;
-      line-height: 1.7;
-      padding: 0 24px;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 64px 0 96px;
-    }
+        body {
+            background: #0A0A0F;
+            color: #F0EFF8;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    .wordmark {
-      font-size: 11px;
-      letter-spacing: 3px;
-      font-weight: 600;
-      color: #666;
-      text-transform: uppercase;
-      margin-bottom: 48px;
-      display: block;
-    }
+        .accent-bar {
+            height: 3px;
+            background: linear-gradient(90deg, #7B6EF6 0%, #3DDBB4 50%, #7B6EF6 100%);
+            background-size: 200% 100%;
+        }
 
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 8px;
-      color: #E8E8EC;
-    }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
 
-    .effective {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 48px;
-    }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
 
-    .rule {
-      width: 40px;
-      height: 2px;
-      background: linear-gradient(90deg, #7B6EF6, #A78BFA);
-      margin-bottom: 48px;
-      border-radius: 1px;
-    }
+        .brand-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #7B6EF6, #9D93F8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            flex-shrink: 0;
+        }
 
-    .intro {
-      font-size: 16px;
-      background: #1A1A20;
-      border: 0.5px solid #2A2A30;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 48px;
-      color: #C8C8D0;
-    }
+        .brand-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #F0EFF8;
+            letter-spacing: -0.3px;
+        }
 
-    .intro strong {
-      color: #E8E8EC;
-    }
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin: 24px 0 12px;
+            color: #F0EFF8;
+        }
 
-    h2 {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #666;
-      margin-top: 48px;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 0.5px solid #2A2A30;
-    }
+        .meta {
+            color: #7A79A0;
+            font-size: 13px;
+            margin-bottom: 40px;
+        }
 
-    p {
-      font-size: 15px;
-      margin-bottom: 16px;
-      color: #C8C8D0;
-    }
+        .meta span {
+            display: inline-block;
+            margin-right: 24px;
+        }
 
-    ul {
-      list-style: none;
-      margin-bottom: 16px;
-    }
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            color: #F0EFF8;
+            letter-spacing: -0.3px;
+        }
 
-    ul li {
-      font-size: 15px;
-      padding: 6px 0 6px 20px;
-      position: relative;
-      color: #C8C8D0;
-    }
+        h2:first-of-type {
+            margin-top: 0;
+        }
 
-    ul li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      color: #555;
-    }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 24px 0 8px;
+            color: #F0EFF8;
+        }
 
-    .service-block {
-      background: #1A1A20;
-      border: 0.5px solid #2A2A30;
-      border-radius: 12px;
-      padding: 16px 20px;
-      margin-bottom: 12px;
-    }
+        p {
+            margin-bottom: 16px;
+            color: #F0EFF8;
+        }
 
-    .service-block strong {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 4px;
-      color: #E8E8EC;
-    }
+        a {
+            color: #7B6EF6;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
 
-    .service-block p {
-      font-size: 13px;
-      color: #888;
-      margin: 0;
-    }
+        a:hover {
+            color: #9D93F8;
+            text-decoration: underline;
+        }
 
-    .service-block a {
-      color: #A78BFA;
-      text-decoration: none;
-    }
+        ul, ol {
+            margin: 0 0 16px 20px;
+        }
 
-    .badge {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: linear-gradient(135deg, #7B6EF6, #A78BFA);
-      color: #fff;
-      padding: 2px 7px;
-      border-radius: 4px;
-      margin-left: 8px;
-      vertical-align: middle;
-    }
+        li {
+            margin-bottom: 6px;
+        }
 
-    .contact-block {
-      margin-top: 48px;
-      padding: 24px;
-      border: 0.5px solid #2A2A30;
-      border-radius: 12px;
-    }
+        .card {
+            background: #141422;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
 
-    .contact-block p {
-      margin: 0;
-      font-size: 14px;
-      color: #C8C8D0;
-    }
+        .card p:last-child,
+        .card ul:last-child {
+            margin-bottom: 0;
+        }
 
-    .contact-block strong {
-      color: #E8E8EC;
-    }
+        .highlight {
+            color: #7B6EF6;
+            font-weight: 600;
+        }
 
-    .contact-block a {
-      color: #A78BFA;
-      text-decoration: none;
-    }
+        .muted {
+            color: #7A79A0;
+        }
 
-    .footer-nav {
-      margin-top: 64px;
-      padding-top: 24px;
-      border-top: 0.5px solid #2A2A30;
-      font-size: 13px;
-      color: #555;
-    }
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            margin: 48px 0;
+        }
 
-    .footer-nav a {
-      color: #A78BFA;
-      text-decoration: none;
-    }
-  </style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        thead th {
+            text-align: left;
+            padding: 10px 14px;
+            background: #141422;
+            color: #7A79A0;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        thead th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        tbody td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            vertical-align: top;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 8px;
+        }
+
+        tbody tr:last-child td:last-child {
+            border-radius: 0 0 8px 0;
+        }
+
+        .section-number {
+            display: inline-block;
+            color: #7B6EF6;
+            font-weight: 700;
+            margin-right: 8px;
+            font-size: 22px;
+        }
+
+        .rights-group {
+            margin: 16px 0;
+        }
+
+        .rights-group strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #9D93F8;
+            font-size: 14px;
+        }
+
+        .rights-group ul {
+            margin-bottom: 12px;
+        }
+
+        .contact-card {
+            background: #141422;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+            color: #7A79A0;
+            font-size: 14px;
+        }
+
+        .contact-card .email {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            color: #7A79A0;
+            font-size: 13px;
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 16px 60px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 19px;
+                margin-top: 36px;
+            }
+
+            .card {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            thead th, tbody td {
+                padding: 8px 10px;
+            }
+
+            .meta span {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 2px;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
+    <div class="accent-bar"></div>
 
-  <span class="wordmark">TAPIX</span>
+    <div class="container">
+        <div class="brand">
+            <div class="brand-icon">T</div>
+            <div class="brand-name">Tapix</div>
+        </div>
 
-  <h1>Privacy Policy</h1>
-  <p class="effective">Effective date: March 12, 2026 &nbsp;·&nbsp; Last updated: March 12, 2026</p>
-  <div class="rule"></div>
+        <h1>Privacy Policy</h1>
 
-  <div class="intro">
-    <strong>The short version:</strong> Tapix processes text you select in the keyboard extension by sending it to Anthropic's Claude API for AI-powered transformation. We do not collect personal information, we do not sell data, and we do not require an account. Text is sent only when you explicitly trigger an action, and is never stored after processing completes.
-  </div>
+        <div class="meta">
+            <span><strong>Effective Date:</strong> March 12, 2026</span>
+            <span><strong>Last Updated:</strong> March 12, 2026</span>
+        </div>
 
-  <h2>1. Who We Are</h2>
-  <p>Tapix is developed and operated by Dmzlabz ("we," "us," or "our"). Tapix is an iOS keyboard extension that uses AI to transform your text — fix grammar, translate, adjust tone, shorten, and draft smart replies. If you have questions about this policy, contact us at the address at the bottom of this page.</p>
+        <!-- 1. Introduction -->
+        <h2><span class="section-number">1.</span> Introduction</h2>
+        <p>Tapix is an AI-powered keyboard and text transformation app for iOS. It allows you to select text and transform it using artificial intelligence — rewrite, translate, summarize, fix grammar, and more. This Privacy Policy explains what data we collect, how we handle it, and what rights you have regarding your information.</p>
 
-  <h2>2. What Data Tapix Processes</h2>
-  <p>Tapix does not require an account. There is no registration, no login, and no user profile.</p>
+        <hr class="divider">
 
-  <p><strong>Text you select for AI actions.</strong> When you highlight text and tap an action (Fix It, Translate, Tone, Shorten, or Smart Reply), the selected text is sent to Anthropic's Claude API for processing. The text is used solely to perform the requested transformation and is not stored by Tapix after the result is returned.</p>
+        <!-- 2. Who We Are -->
+        <h2><span class="section-number">2.</span> Who We Are</h2>
+        <p>Tapix is developed by <span class="highlight">Dmzlabz Inc.</span>, based in Israel.</p>
+        <p>Contact: <a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a></p>
 
-  <p><strong>Data stored on your device:</strong></p>
-  <ul>
-    <li>App preferences (selected language, notification settings, onboarding state)</li>
-    <li>AI action usage credits (stored via iCloud Key-Value Store and device Keychain to persist across reinstalls)</li>
-    <li>Subscription status (managed by Apple StoreKit)</li>
-  </ul>
-  <p>None of this data is transmitted to Tapix's servers or any third party, except as described in Section 4.</p>
+        <hr class="divider">
 
-  <h2>3. Keyboard Extension Data Access</h2>
-  <p>Tapix includes a custom keyboard extension. iOS requires "Full Access" to be enabled for the keyboard to communicate with the AI service. When Full Access is enabled:</p>
-  <ul>
-    <li>Tapix can send the text you explicitly select to the Claude API when you trigger an action</li>
-    <li>Tapix does not log keystrokes, monitor typing, or record any text beyond what you actively select for an action</li>
-    <li>Tapix does not access your contacts, location, photos, or any other device data</li>
-    <li>No text is transmitted unless you explicitly tap an AI action button</li>
-  </ul>
-  <p>The keyboard extension and the main app share data (preferences and credit balance) through Apple's App Groups framework. This communication stays entirely on your device.</p>
+        <!-- 3. Data We Collect and Process -->
+        <h2><span class="section-number">3.</span> Data We Collect and Process</h2>
 
-  <h2>4. Third-Party Services We Use</h2>
-  <p>Tapix connects to the following external services. We use them only to provide specific features and we do not share personal information with any of them.</p>
+        <h3>a. Text Data Processed by AI</h3>
+        <div class="card">
+            <p>When you use an AI action, the selected text (up to 4,000 characters) is sent to third-party AI providers for processing. This text is transmitted directly to the provider and is <strong>not stored on our servers</strong> — we have no servers.</p>
+            <p>The AI providers are:</p>
+            <ul>
+                <li><strong>Anthropic (Claude API)</strong> — processes your text and returns results. Per Anthropic's API policy, inputs and outputs are not used for model training and are not retained beyond 30 days for trust &amp; safety purposes.</li>
+                <li><strong>Google (Gemini API)</strong> — used as a fallback when the primary provider is unavailable. Per Google's API terms, data is processed but not retained for model training.</li>
+            </ul>
+            <p class="muted" style="font-size: 13px; margin-bottom: 0;">No user identity, device ID, or personal metadata is attached to AI requests — only the text you selected and a system prompt describing the requested action.</p>
+        </div>
 
-  <div class="service-block">
-    <strong>Anthropic Claude API — AI Text Transformation</strong>
-    <p>When you trigger an AI action, the selected text is sent to Anthropic's API for processing. The text is used solely to perform the requested transformation (grammar correction, translation, tone adjustment, shortening, or smart reply generation). Tapix does not store the text after the result is returned. Anthropic may process this data subject to their own privacy policy: <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a></p>
-  </div>
+        <h3>b. Action History (Local Only)</h3>
+        <div class="card">
+            <p>We store a brief record of your AI actions <strong>locally on your device</strong>:</p>
+            <ul>
+                <li>Action type and label</li>
+                <li>First 80 characters of input and output (preview only)</li>
+                <li>Timestamp and character counts</li>
+            </ul>
+            <p class="muted" style="font-size: 13px; margin-bottom: 0;">This data is stored in a local SQLite database on your device and is never transmitted to any server. It exists solely for your reference.</p>
+        </div>
 
-  <div class="service-block">
-    <strong>Apple StoreKit — In-App Subscriptions</strong>
-    <p>Tapix Pro is available as a monthly or annual subscription through Apple's App Store. All payment processing is handled by Apple. Tapix never sees your payment information. Apple's privacy policy governs these transactions: <a href="https://www.apple.com/privacy" target="_blank">apple.com/privacy</a></p>
-  </div>
+        <h3>c. Usage Analytics</h3>
+        <div class="card">
+            <p>We use Firebase Analytics to collect anonymized usage data:</p>
+            <ul>
+                <li>Screen views and feature usage events</li>
+                <li>Subscription tier (free or premium) as a user property</li>
+                <li>Standard device information collected by Firebase SDK (device model, OS version, anonymous instance ID)</li>
+            </ul>
+            <p class="muted" style="font-size: 13px; margin-bottom: 0;">No user text content is ever included in analytics events. Analytics can be considered anonymized as there are no user accounts.</p>
+        </div>
 
-  <h2>5. Data We Do Not Collect</h2>
-  <p>To be explicit, Tapix does not collect or process:</p>
-  <ul>
-    <li>Your name, email address, or phone number</li>
-    <li>Keystroke logs or typing patterns</li>
-    <li>Device identifiers (IDFA, IDFV) for advertising purposes</li>
-    <li>Location data</li>
-    <li>Contacts, calendar entries, or health data</li>
-    <li>Behavioral analytics or usage telemetry</li>
-    <li>Crash logs sent to third-party services</li>
-    <li>Text you type but do not submit to an AI action</li>
-  </ul>
+        <h3>d. Purchase Data</h3>
+        <p>Subscription purchases are handled entirely by Apple through StoreKit. We receive transaction verification tokens from Apple to confirm subscription status. We do <strong>not</strong> collect or store any payment information (credit cards, billing addresses, etc.).</p>
 
-  <h2>6. Bug Reports</h2>
-  <p>If you choose to submit a bug report via the in-app "Report a Bug" feature, an email is opened on your device containing diagnostic information you can review before sending: app version, iOS version, device model, locale setting, and subscription status. This data is only sent if you choose to send the email. It is used solely to diagnose issues and is not shared with any third party.</p>
+        <h3>e. App Settings</h3>
+        <p>Your preferences (display currency, translation language, notification settings, etc.) are stored locally on your device.</p>
 
-  <h2>7. Children's Privacy</h2>
-  <p>Tapix is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information through the app, please contact us and we will take appropriate steps to address it.</p>
+        <hr class="divider">
 
-  <h2>8. Data Retention and Deletion</h2>
-  <p>Tapix does not retain text submitted for AI processing. Text is sent to the API, the result is returned, and the original text is discarded.</p>
-  <p>App preferences and credit balances stored on your device are removed when you uninstall the app. Credit balances stored in iCloud Key-Value Store persist until you manually remove them from your iCloud storage via your iPhone's Settings → Apple ID → iCloud → Manage Storage.</p>
+        <!-- 4. Keyboard Extension & Full Access -->
+        <h2><span class="section-number">4.</span> Keyboard Extension &amp; Full Access</h2>
+        <p>Tapix includes a custom keyboard extension that requires "Full Access" to function. Full Access is needed <strong>solely</strong> to make network requests to AI providers for text transformation.</p>
 
-  <h2>9. Security</h2>
-  <p>Tapix takes reasonable technical precautions to protect your data. All API communications use HTTPS. Sensitive preferences are stored in Apple's encrypted Keychain where applicable. The keyboard extension communicates with the main app exclusively through Apple's App Groups framework.</p>
-  <p>No method of data transmission or storage is completely secure. We cannot guarantee absolute security, but we are committed to implementing best practices for an iOS application of this type.</p>
+        <div class="card">
+            <p><strong>When using the keyboard:</strong></p>
+            <ul>
+                <li>The keyboard reads text near your cursor to provide context for AI actions</li>
+                <li>Selected text is sent to AI providers <strong>only when you explicitly trigger an action</strong></li>
+                <li>The keyboard does <strong>not</strong> log keystrokes</li>
+                <li>The keyboard does <strong>not</strong> collect passwords or sensitive field content beyond what you explicitly select for transformation</li>
+                <li>A brief action history entry (80-character preview) is saved locally for your reference</li>
+            </ul>
+            <p class="muted" style="font-size: 13px; margin-bottom: 0;">Without Full Access enabled, the keyboard cannot access the network and AI features will not function.</p>
+        </div>
 
-  <h2>10. International Users</h2>
-  <p>Tapix is operated from Israel. If you are using the app from outside Israel, please be aware that text sent to the Anthropic Claude API may be processed in other jurisdictions, including the United States. By using Tapix, you consent to this processing.</p>
+        <hr class="divider">
 
-  <h2>11. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of Tapix after changes are posted constitutes your acceptance of the revised policy. For significant changes, we will provide a notice within the app.</p>
+        <!-- 5. How We Use Your Data -->
+        <h2><span class="section-number">5.</span> How We Use Your Data</h2>
+        <ul>
+            <li><strong>AI text processing:</strong> To perform the text transformation you requested</li>
+            <li><strong>Action history:</strong> To show you a local log of your recent actions</li>
+            <li><strong>Analytics:</strong> To understand which features are used and improve the app</li>
+            <li><strong>Purchase verification:</strong> To unlock premium features for subscribers</li>
+            <li><strong>Settings:</strong> To remember your preferences</li>
+        </ul>
 
-  <h2>12. Your Rights</h2>
-  <p>Because Tapix does not collect or store personal data on any server, most data-subject rights (access, portability, erasure) are fulfilled automatically by you controlling your own device. If you have questions about data processed by Anthropic (text transformations), please refer to their privacy policy and privacy portal.</p>
+        <hr class="divider">
 
-  <div class="contact-block">
-    <p><strong>Contact us</strong><br />
-    If you have questions about this Privacy Policy, please reach out:<br /><br />
-    Dmzlabz<br />
-    <a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a><br />
-    Israel</p>
-  </div>
+        <!-- 6. Data Storage & Security -->
+        <h2><span class="section-number">6.</span> Data Storage &amp; Security</h2>
+        <div class="card">
+            <ul>
+                <li>All user data is stored locally on your device using iOS-native storage (SQLite/SwiftData and UserDefaults)</li>
+                <li>There is <strong>no cloud sync</strong> — your data stays on your device</li>
+                <li>We do <strong>not</strong> operate any servers that store user data</li>
+                <li>All network communications use HTTPS encryption</li>
+                <li>iOS Data Protection applies to all stored data</li>
+                <li>API configuration is managed securely via Firebase Remote Config</li>
+            </ul>
+        </div>
 
-  <div class="footer-nav">
-    <a href="index.html">← Back</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="support.html">Support</a>
-  </div>
+        <hr class="divider">
 
-</div>
+        <!-- 7. Data Retention -->
+        <h2><span class="section-number">7.</span> Data Retention</h2>
+        <ul>
+            <li><strong>Local data</strong> (action history, settings): Retained on your device until you delete it or uninstall the app</li>
+            <li><strong>AI provider data:</strong> Anthropic retains API data for up to 30 days for trust &amp; safety; Google processes data transiently per their API terms</li>
+            <li><strong>Firebase Analytics:</strong> Retained per Google's default data retention settings (14 months)</li>
+            <li><strong>Uninstalling Tapix:</strong> Removes all locally stored data from your device</li>
+        </ul>
+
+        <hr class="divider">
+
+        <!-- 8. Data Transfers -->
+        <h2><span class="section-number">8.</span> Data Transfers</h2>
+        <p>When you use AI features, your selected text is transmitted to servers operated by:</p>
+        <ul>
+            <li><strong>Anthropic</strong> (United States) — for Claude AI processing</li>
+            <li><strong>Google</strong> (United States) — for Gemini AI processing (fallback)</li>
+            <li><strong>Google/Firebase</strong> (United States) — for analytics and configuration</li>
+        </ul>
+        <p>These transfers are necessary to provide AI-powered text transformation. All transfers use HTTPS encryption.</p>
+
+        <hr class="divider">
+
+        <!-- 9. Third-Party Services -->
+        <h2><span class="section-number">9.</span> Third-Party Services</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Purpose</th>
+                    <th>Privacy Policy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Anthropic Claude API</td>
+                    <td>AI text processing</td>
+                    <td><a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com</a></td>
+                </tr>
+                <tr>
+                    <td>Google Gemini API</td>
+                    <td>AI text processing (fallback)</td>
+                    <td><a href="https://ai.google.dev/terms" target="_blank" rel="noopener">ai.google.dev</a></td>
+                </tr>
+                <tr>
+                    <td>Firebase Analytics</td>
+                    <td>Usage analytics</td>
+                    <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com</a></td>
+                </tr>
+                <tr>
+                    <td>Firebase Remote Config</td>
+                    <td>App configuration</td>
+                    <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>These services act as data processors on our behalf. <strong>We do not sell your data to any third party.</strong></p>
+
+        <hr class="divider">
+
+        <!-- 10. Your Rights -->
+        <h2><span class="section-number">10.</span> Your Rights</h2>
+
+        <div class="rights-group">
+            <strong>Under GDPR (EU/EEA residents):</strong>
+            <ul>
+                <li>Right to access your personal data</li>
+                <li>Right to erasure ("right to be forgotten")</li>
+                <li>Right to data portability</li>
+                <li>Right to object to processing</li>
+                <li>Right to restrict processing</li>
+            </ul>
+        </div>
+
+        <div class="rights-group">
+            <strong>Under CCPA (California residents):</strong>
+            <ul>
+                <li>Right to know what data is collected</li>
+                <li>Right to delete your data</li>
+                <li>Right to opt-out of data sales (we do not sell data)</li>
+                <li>Right to non-discrimination</li>
+            </ul>
+        </div>
+
+        <div class="rights-group">
+            <strong>Under Israeli Privacy Protection Law:</strong>
+            <ul>
+                <li>Right to access and review your data</li>
+                <li>Right to request correction or deletion</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <p><strong>How to exercise your rights:</strong></p>
+            <ul>
+                <li><strong>Action History:</strong> You can clear your action history within the app</li>
+                <li><strong>Analytics:</strong> You can limit ad tracking in iOS Settings &gt; Privacy</li>
+                <li><strong>All local data:</strong> Uninstalling Tapix removes all data from your device</li>
+                <li>For any data-related requests, contact us at <a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <hr class="divider">
+
+        <!-- 11. Children's Privacy -->
+        <h2><span class="section-number">11.</span> Children's Privacy</h2>
+        <p>Tapix does not knowingly collect personal information from children under 13. The app does not contain age-restricted content, but AI-generated text transformations may occasionally produce unexpected results. Parental guidance is recommended for young users.</p>
+
+        <hr class="divider">
+
+        <!-- 12. AI Content Disclaimer -->
+        <h2><span class="section-number">12.</span> AI Content Disclaimer</h2>
+        <p>Text transformations are generated by third-party AI models. We include safety guidelines in our AI prompts, but we cannot guarantee that all AI-generated content will be appropriate in every context. You are responsible for reviewing AI-generated text before using it.</p>
+
+        <hr class="divider">
+
+        <!-- 13. Changes to This Policy -->
+        <h2><span class="section-number">13.</span> Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify users of significant changes through the app or by updating the "Last Updated" date at the top of this page. Continued use of Tapix after changes constitutes acceptance of the revised policy.</p>
+
+        <hr class="divider">
+
+        <!-- 14. Contact Us -->
+        <h2><span class="section-number">14.</span> Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or your data:</p>
+
+        <div class="contact-card">
+            <p class="email"><a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a></p>
+            <p>Dmzlabz Inc.</p>
+        </div>
+
+        <footer>
+            <p><a href="index.html">← Back</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
+            <p>&copy; 2026 Tapix. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>

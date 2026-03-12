@@ -1,249 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support — Tapix</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Tapix</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0E0E10;
-      color: #E8E8EC;
-      line-height: 1.7;
-      padding: 0 24px;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 64px 0 96px;
-    }
+        body {
+            background: #0A0A0F;
+            color: #F0EFF8;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    .wordmark {
-      font-size: 11px;
-      letter-spacing: 3px;
-      font-weight: 600;
-      color: #666;
-      text-transform: uppercase;
-      margin-bottom: 48px;
-      display: block;
-    }
+        .accent-bar {
+            height: 3px;
+            background: linear-gradient(90deg, #7B6EF6 0%, #3DDBB4 50%, #7B6EF6 100%);
+            background-size: 200% 100%;
+        }
 
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 8px;
-      color: #E8E8EC;
-    }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
 
-    .subtitle {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 48px;
-    }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
 
-    .rule {
-      width: 40px;
-      height: 2px;
-      background: linear-gradient(90deg, #7B6EF6, #A78BFA);
-      margin-bottom: 48px;
-      border-radius: 1px;
-    }
+        .brand-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #7B6EF6, #9D93F8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            flex-shrink: 0;
+        }
 
-    .intro {
-      font-size: 16px;
-      background: #1A1A20;
-      border: 0.5px solid #2A2A30;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 48px;
-      color: #C8C8D0;
-    }
+        .brand-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #F0EFF8;
+            letter-spacing: -0.3px;
+        }
 
-    .intro strong {
-      color: #E8E8EC;
-    }
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin: 24px 0 12px;
+            color: #F0EFF8;
+        }
 
-    .intro a {
-      color: #A78BFA;
-      text-decoration: none;
-      font-weight: 600;
-    }
+        .meta {
+            color: #7A79A0;
+            font-size: 13px;
+            margin-bottom: 40px;
+        }
 
-    h2 {
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #666;
-      margin-top: 48px;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 0.5px solid #2A2A30;
-    }
+        .meta span {
+            display: inline-block;
+            margin-right: 24px;
+        }
 
-    p {
-      font-size: 15px;
-      margin-bottom: 16px;
-      color: #C8C8D0;
-    }
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 48px 0 16px;
+            color: #F0EFF8;
+            letter-spacing: -0.3px;
+        }
 
-    .faq-item {
-      margin-bottom: 32px;
-    }
+        h2:first-of-type {
+            margin-top: 0;
+        }
 
-    .faq-item h3 {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #E8E8EC;
-    }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 24px 0 8px;
+            color: #F0EFF8;
+        }
 
-    .faq-item p {
-      font-size: 14px;
-      color: #888;
-      margin: 0;
-    }
+        p {
+            margin-bottom: 16px;
+            color: #F0EFF8;
+        }
 
-    .contact-block {
-      margin-top: 48px;
-      padding: 24px;
-      border: 0.5px solid #2A2A30;
-      border-radius: 12px;
-    }
+        a {
+            color: #7B6EF6;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
 
-    .contact-block p {
-      margin: 0;
-      font-size: 14px;
-      color: #C8C8D0;
-    }
+        a:hover {
+            color: #9D93F8;
+            text-decoration: underline;
+        }
 
-    .contact-block strong {
-      color: #E8E8EC;
-    }
+        ul, ol {
+            margin: 0 0 16px 20px;
+        }
 
-    .contact-block a {
-      color: #A78BFA;
-      text-decoration: none;
-    }
+        li {
+            margin-bottom: 6px;
+        }
 
-    a { color: #A78BFA; text-decoration: none; }
+        .card {
+            background: #141422;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
 
-    .footer-nav {
-      margin-top: 64px;
-      padding-top: 24px;
-      border-top: 0.5px solid #2A2A30;
-      font-size: 13px;
-      color: #555;
-    }
-  </style>
+        .card p:last-child,
+        .card ul:last-child,
+        .card ol:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: #7B6EF6;
+            font-weight: 600;
+        }
+
+        .muted {
+            color: #7A79A0;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            margin: 48px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        thead th {
+            text-align: left;
+            padding: 10px 14px;
+            background: #141422;
+            color: #7A79A0;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        thead th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        tbody td {
+            padding: 10px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            vertical-align: top;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 8px;
+        }
+
+        tbody tr:last-child td:last-child {
+            border-radius: 0 0 8px 0;
+        }
+
+        .section-number {
+            display: inline-block;
+            color: #7B6EF6;
+            font-weight: 700;
+            margin-right: 8px;
+            font-size: 22px;
+        }
+
+        .faq-item {
+            background: #141422;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 12px 0;
+        }
+
+        .faq-item .faq-question {
+            font-weight: 600;
+            font-size: 15px;
+            color: #F0EFF8;
+            margin-bottom: 10px;
+        }
+
+        .faq-item p:last-child,
+        .faq-item ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-item ul {
+            margin-top: 8px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #7B6EF6, #9D93F8);
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .step-list {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .step-list li span {
+            padding-top: 1px;
+        }
+
+        .contact-card {
+            background: #141422;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+            color: #7A79A0;
+            font-size: 14px;
+        }
+
+        .contact-card .email {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .teal {
+            color: #3DDBB4;
+        }
+
+        footer {
+            text-align: center;
+            color: #7A79A0;
+            font-size: 13px;
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        footer a {
+            color: #7A79A0;
+            margin: 0 12px;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #7B6EF6;
+        }
+
+        footer .footer-links {
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 32px 16px 60px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 19px;
+                margin-top: 36px;
+            }
+
+            .card, .faq-item {
+                padding: 16px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            thead th, tbody td {
+                padding: 8px 10px;
+            }
+
+            .meta span {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 2px;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
+    <div class="accent-bar"></div>
 
-  <span class="wordmark">TAPIX</span>
+    <div class="container">
+        <div class="brand">
+            <div class="brand-icon">T</div>
+            <div class="brand-name">Tapix</div>
+        </div>
 
-  <h1>Support</h1>
-  <p class="subtitle">We're here to help you get the most out of Tapix.</p>
-  <div class="rule"></div>
+        <h1>Support</h1>
 
-  <div class="intro">
-    <strong>Need help?</strong> Email us at <a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a> and we'll get back to you within 24 hours. You can also use the in-app "Report a Bug" feature in Settings for technical issues.
-  </div>
+        <div class="meta">
+            <span>Everything you need to get started and troubleshoot Tapix.</span>
+        </div>
 
-  <h2>Getting Started</h2>
+        <!-- 1. Getting Started -->
+        <h2><span class="section-number">1.</span> Getting Started</h2>
 
-  <div class="faq-item">
-    <h3>How do I enable the Tapix keyboard?</h3>
-    <p>Go to your iPhone's Settings → General → Keyboard → Keyboards → Add New Keyboard → select Tapix. Then tap Tapix in the list and enable "Allow Full Access." Full Access is required for Tapix to send your selected text to the AI service for processing.</p>
-  </div>
+        <h3>Setting up the Tapix Keyboard</h3>
+        <div class="card">
+            <ol class="step-list">
+                <li><span class="step-number">1</span><span>Open the <strong>Settings</strong> app on your iPhone</span></li>
+                <li><span class="step-number">2</span><span>Go to <strong>General &gt; Keyboard &gt; Keyboards &gt; Add New Keyboard</strong></span></li>
+                <li><span class="step-number">3</span><span>Select <strong>Tapix</strong></span></li>
+                <li><span class="step-number">4</span><span>Tap <strong>Tapix</strong> again and enable <strong>Allow Full Access</strong></span></li>
+                <li><span class="step-number">5</span><span>Full Access is required for the keyboard to communicate with AI providers over the network</span></li>
+            </ol>
+        </div>
 
-  <div class="faq-item">
-    <h3>Is Full Access safe?</h3>
-    <p>Yes. Tapix only sends text to the AI service when you explicitly tap an action button. We do not log keystrokes, monitor your typing, or access any text you don't actively select for an action. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
-  </div>
+        <h3>Why does Tapix need Full Access?</h3>
+        <p>Tapix uses AI providers (Anthropic Claude and Google Gemini) to transform your text. Full Access enables the keyboard to make network requests to these services. Without it, AI features cannot function.</p>
+        <div class="card">
+            <p style="margin-bottom: 0;">Tapix does <strong>NOT</strong> log your keystrokes and does <strong>NOT</strong> collect passwords or sensitive information. The keyboard only reads text near your cursor when you explicitly trigger an AI action.</p>
+        </div>
 
-  <h2>Using Tapix</h2>
+        <hr class="divider">
 
-  <div class="faq-item">
-    <h3>What AI actions are available?</h3>
-    <p>Tapix offers five core actions: Fix It (grammar and spelling correction), Translate (between languages), Tone (with options for Formal, Casual, Polite, and Professional), Shorten (condense text while keeping meaning), and Smart Reply (generate a contextual response to a message).</p>
-  </div>
+        <!-- 2. How to Use Tapix -->
+        <h2><span class="section-number">2.</span> How to Use Tapix</h2>
 
-  <div class="faq-item">
-    <h3>How do I use an AI action?</h3>
-    <p>Select text in any app, switch to the Tapix keyboard, and tap the action you want. The result appears in the keyboard — you can then accept it to replace your text or copy it to your clipboard.</p>
-  </div>
+        <h3>From the Keyboard</h3>
+        <div class="card">
+            <ul>
+                <li>Switch to the Tapix keyboard using the globe icon</li>
+                <li>Select or position your cursor near the text you want to transform</li>
+                <li>Choose an AI action (e.g., Rewrite, Fix Grammar, Translate, Summarize, Expand, etc.)</li>
+                <li>The transformed text will appear for you to review and use</li>
+            </ul>
+        </div>
 
-  <div class="faq-item">
-    <h3>Which languages does Tapix support?</h3>
-    <p>Tapix currently supports Hebrew and English with full optimization. The AI model can process many other languages as well, though results may vary. We're actively expanding language support.</p>
-  </div>
+        <h3>From the App</h3>
+        <div class="card">
+            <ul>
+                <li>Open Tapix and paste or type your text</li>
+                <li>Select an AI action</li>
+                <li>Review and copy the result</li>
+            </ul>
+        </div>
 
-  <div class="faq-item">
-    <h3>What are credits and how do they work?</h3>
-    <p>Free users receive a limited number of daily AI action credits. Each time you trigger an action (Fix It, Translate, etc.), one credit is used. Credits reset daily. Pro subscribers get unlimited actions with no credit limits.</p>
-  </div>
+        <h3>Available Actions</h3>
+        <p>Tapix offers various AI-powered text transformations including rewriting, grammar correction, translation, summarization, expansion, tone adjustment, and more. Actions can be customized in the app settings.</p>
 
-  <h2>Tapix Pro</h2>
+        <hr class="divider">
 
-  <div class="faq-item">
-    <h3>What does Tapix Pro include?</h3>
-    <p>Tapix Pro unlocks unlimited AI actions (no daily credit limits), the Insights dashboard showing usage stats and time saved, priority processing, and all future Pro features. Available as a monthly or annual subscription.</p>
-  </div>
+        <!-- 3. Free vs. Premium -->
+        <h2><span class="section-number">3.</span> Free vs. Premium</h2>
 
-  <div class="faq-item">
-    <h3>How do I subscribe to Pro?</h3>
-    <p>Open the Tapix app and tap the upgrade button. You can choose between monthly and annual plans. Payment is processed through Apple — we never see your payment details.</p>
-  </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Free</th>
+                    <th>Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>All AI actions</td>
+                    <td class="teal">&#10003;</td>
+                    <td class="teal">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Daily AI actions</td>
+                    <td>15 per day</td>
+                    <td class="highlight">Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Action history</td>
+                    <td class="teal">&#10003;</td>
+                    <td class="teal">&#10003;</td>
+                </tr>
+            </tbody>
+        </table>
 
-  <div class="faq-item">
-    <h3>How do I cancel my subscription?</h3>
-    <p>Go to your iPhone's Settings → Apple ID → Subscriptions → Tapix, then tap "Cancel Subscription." You'll keep Pro access until the end of your current billing period.</p>
-  </div>
+        <h3>Upgrading to Premium</h3>
+        <div class="card">
+            <ul>
+                <li>Open Tapix &gt; Settings &gt; Subscription</li>
+                <li>Choose Monthly or Annual plan</li>
+                <li>Confirm purchase with your Apple ID</li>
+            </ul>
+        </div>
+        <p class="muted" style="font-size: 13px;">Your daily free limit resets at midnight each day.</p>
 
-  <div class="faq-item">
-    <h3>How do I restore my purchase?</h3>
-    <p>Open Tapix, go to Settings, and tap "Restore Purchases." Make sure you're signed in with the same Apple ID you used for the original purchase.</p>
-  </div>
+        <hr class="divider">
 
-  <h2>Troubleshooting</h2>
+        <!-- 4. Managing Your Subscription -->
+        <h2><span class="section-number">4.</span> Managing Your Subscription</h2>
 
-  <div class="faq-item">
-    <h3>The keyboard isn't showing up</h3>
-    <p>Make sure you've added Tapix in Settings → General → Keyboard → Keyboards. If it's listed but not appearing, try removing and re-adding it. Restart your device if the issue persists.</p>
-  </div>
+        <h3>To cancel or change your subscription</h3>
+        <div class="card">
+            <ol class="step-list">
+                <li><span class="step-number">1</span><span>Open the <strong>Settings</strong> app on your iPhone</span></li>
+                <li><span class="step-number">2</span><span>Tap your <strong>Apple ID</strong> at the top</span></li>
+                <li><span class="step-number">3</span><span>Tap <strong>Subscriptions</strong></span></li>
+                <li><span class="step-number">4</span><span>Find <strong>Tapix Premium</strong> and manage from there</span></li>
+            </ol>
+        </div>
 
-  <div class="faq-item">
-    <h3>Actions aren't working or returning errors</h3>
-    <p>Check your internet connection — Tapix requires an active connection to process text. If connected but still failing, the AI service may be temporarily unavailable. Try again in a few minutes.</p>
-  </div>
+        <ul>
+            <li>Subscriptions auto-renew unless cancelled at least 24 hours before the renewal date</li>
+            <li>After cancellation, you retain Premium access until the end of your current billing period</li>
+            <li>You can resubscribe at any time</li>
+        </ul>
 
-  <div class="faq-item">
-    <h3>How do I request a refund?</h3>
-    <p>All purchases are processed by Apple. You can request a refund through Apple's support at <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</p>
-  </div>
+        <hr class="divider">
 
-  <div class="faq-item">
-    <h3>How do I delete my data?</h3>
-    <p>Tapix stores minimal data on your device (preferences and credit balance only). Uninstalling the app removes all locally stored data. Credit balances in iCloud Key-Value Store can be managed through your iPhone's Settings → Apple ID → iCloud → Manage Storage.</p>
-  </div>
+        <!-- 5. Frequently Asked Questions -->
+        <h2><span class="section-number">5.</span> Frequently Asked Questions</h2>
 
-  <div class="contact-block">
-    <p><strong>Still need help?</strong><br /><br />
-    Dmzlabz<br />
-    <a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a><br />
-    Israel<br /><br />
-    We typically respond within 24 hours.</p>
-  </div>
+        <div class="faq-item">
+            <p class="faq-question">"Why aren't AI actions working?"</p>
+            <ul>
+                <li>Ensure Full Access is enabled: Settings &gt; General &gt; Keyboard &gt; Keyboards &gt; Tapix &gt; Allow Full Access</li>
+                <li>Check your internet connection &mdash; AI features require network access</li>
+                <li>If you've declined the AI consent prompt, go to Tapix app settings and accept it</li>
+                <li>Make sure you haven't reached your daily limit (15 actions for free users)</li>
+            </ul>
+        </div>
 
-  <div class="footer-nav">
-    <a href="index.html">← Back</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a>
-  </div>
+        <div class="faq-item">
+            <p class="faq-question">"I see 'Daily limit reached' &mdash; what do I do?"</p>
+            <ul>
+                <li>Free users get 15 AI actions per day. The limit resets at midnight.</li>
+                <li>Upgrade to Tapix Premium for unlimited actions.</li>
+            </ul>
+        </div>
 
-</div>
+        <div class="faq-item">
+            <p class="faq-question">"The keyboard isn't showing up"</p>
+            <ul>
+                <li>Make sure you've added the keyboard: Settings &gt; General &gt; Keyboard &gt; Keyboards &gt; Add New Keyboard &gt; Tapix</li>
+                <li>Try restarting your iPhone</li>
+                <li>Ensure the app hasn't been offloaded (check Settings &gt; General &gt; iPhone Storage)</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">"AI results seem wrong or unexpected"</p>
+            <ul>
+                <li>AI-generated text is produced by third-party models and may not always be perfect</li>
+                <li>Always review AI output before using it</li>
+                <li>Try rephrasing your input or using a different action for better results</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">"How do I change the translation language?"</p>
+            <p>Open Tapix &gt; Settings &gt; Translation Language and select your preferred target language.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">"Can I use Tapix offline?"</p>
+            <p style="margin-bottom: 0;">No. Tapix requires an internet connection to communicate with AI providers. There is no offline mode.</p>
+        </div>
+
+        <hr class="divider">
+
+        <!-- 6. Your Data & Privacy -->
+        <h2><span class="section-number">6.</span> Your Data &amp; Privacy</h2>
+
+        <h3>What data does Tapix store?</h3>
+        <div class="card">
+            <ul>
+                <li>A brief action history (80-character previews of input/output) stored locally on your device</li>
+                <li>Your app preferences and settings</li>
+                <li>Anonymous usage analytics via Firebase</li>
+            </ul>
+        </div>
+
+        <h3>How to delete your data</h3>
+        <div class="card">
+            <ul>
+                <li><strong>Action History:</strong> Go to Tapix app &gt; Action History and clear it</li>
+                <li><strong>All Data:</strong> Uninstalling Tapix removes all locally stored data from your device</li>
+                <li><strong>Analytics:</strong> You can limit analytics tracking in iOS Settings &gt; Privacy &amp; Security &gt; Analytics</li>
+            </ul>
+        </div>
+
+        <h3>Does Tapix read everything I type?</h3>
+        <p>No. The keyboard only reads text near your cursor when you explicitly trigger an AI action. Tapix does not log keystrokes or monitor your typing.</p>
+        <p>For more details, read our <a href="privacy.html">Privacy Policy</a>.</p>
+
+        <hr class="divider">
+
+        <!-- 7. Troubleshooting -->
+        <h2><span class="section-number">7.</span> Troubleshooting</h2>
+
+        <h3>App crashes or freezes</h3>
+        <div class="card">
+            <ul>
+                <li>Force close and reopen Tapix</li>
+                <li>Ensure you're running iOS 17 or later</li>
+                <li>Update to the latest version from the App Store</li>
+                <li>If the issue persists, try uninstalling and reinstalling</li>
+            </ul>
+        </div>
+
+        <h3>Keyboard is slow</h3>
+        <div class="card">
+            <ul>
+                <li>Check your internet connection</li>
+                <li>AI processing may take a few seconds depending on text length and server load</li>
+                <li>Close unused apps to free up memory</li>
+            </ul>
+        </div>
+
+        <h3>"Network error" messages</h3>
+        <div class="card">
+            <ul>
+                <li>Verify you have an active internet connection (Wi-Fi or cellular)</li>
+                <li>Ensure Full Access is enabled for the keyboard</li>
+                <li>Try again in a few moments &mdash; the AI service may be temporarily unavailable</li>
+            </ul>
+        </div>
+
+        <hr class="divider">
+
+        <!-- 8. Contact Support -->
+        <h2><span class="section-number">8.</span> Contact Support</h2>
+        <p>Need more help? We're here for you.</p>
+
+        <div class="contact-card">
+            <p class="email"><a href="mailto:vittra.app@gmail.com">vittra.app@gmail.com</a></p>
+            <p>We aim to respond within 48 hours</p>
+        </div>
+
+        <div class="card">
+            <p><strong>When contacting support, please include:</strong></p>
+            <ul>
+                <li>Your iOS version (Settings &gt; General &gt; About)</li>
+                <li>Tapix app version (found in Tapix &gt; Settings)</li>
+                <li>A description of the issue</li>
+                <li>Screenshots if applicable</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="index.html">← Back</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            &copy; 2026 Tapix. All rights reserved.
+        </footer>
+    </div>
 </body>
 </html>
